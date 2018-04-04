@@ -1,3 +1,18 @@
+<a name="1.4.1"></a>
+## 1.4.1 (2018-04-04)
+
+
+### Bug Fixes
+
+* 提交漏提交的部分 ([3daa788](https://github.com/Aestus0/myblog/commit/3daa788))
+
+
+### Features
+
+* 新建项目 ([9675722](https://github.com/Aestus0/myblog/commit/9675722))
+
+
+
 <a name="1.2.0"></a>
 # [1.2.0](https://github.com/ruanyf/react-babel-webpack-boilerplate/compare/2804c45...v1.2.0) (2016-04-21)
 
