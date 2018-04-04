@@ -8,9 +8,10 @@ module.exports = {
     hot: true,
     inline: true,
     contentBase: './app',
-    port: 8080
+    port: 8000
   },
   entry: path.resolve(__dirname, 'app/main.js'),
+  devtool: 'source-map',
   output: {
     path: path.resolve(__dirname, 'build'),
     publicPath: '',
@@ -21,7 +22,18 @@ module.exports = {
       {
         test: /\.css$/,
         include: path.resolve(__dirname, 'app'),
-        loader: 'style-loader!css-loader'
+        use: [
+          {
+            loader: 'style-loader'
+          },
+          {
+            loader: 'css-loader',
+            options: {
+              modules: true,
+              localIdentName: '[path][name]__[local]--[hash:base64:5]'
+            }
+          }
+        ]
       },
       {
         test: /\.js[x]?$/,
@@ -36,6 +48,6 @@ module.exports = {
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
-    new OpenBrowserPlugin({ url: 'http://localhost:8080' })
+    new OpenBrowserPlugin({ url: 'http://localhost:8000' })
   ]
 };

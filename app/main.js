@@ -4,5 +4,5 @@ import App from './components/App';
 
 ReactDOM.render(
   <App />,
-  document.body.appendChild(document.createElement('div'))
+  document.body
 );
